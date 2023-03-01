@@ -2,14 +2,14 @@
 name: 'Fix It'
 description: 'Generate comby rules from a PR'
 inputs:
-  pr:  # id of input
-    description: 'PR to be merged in your repo'
+  mountpoint:  # id of input
+    description: 'Mount point for your repo'
     required: true
 outputs:
-  time: # id of output
-    description: 'The time we greeted you'
+  rules: # id of output
+    description: 'rules fixit generated'
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.pr }}
+    - ${{ inputs.mountpoint }}

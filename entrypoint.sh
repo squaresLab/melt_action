@@ -1,5 +1,5 @@
 #!/bin/sh -l
 
-echo $1
-ls /github/workspace
-echo "great, rule!" > /github/workspace/generated_file.txt
+export PYTHONPATH=$PYTHONPATH:/home/test/FixIt
+python3 src/inference/main.py > $1/generated_file.txt
+echo "rules=generated_file.txt" >> $GITHUB_OUTPUT
