@@ -1,3 +1,4 @@
 #!/bin/sh -l
 
-ls $1
+echo $1
+ls /github/workspace
