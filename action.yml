@@ -11,7 +11,7 @@ outputs:
 runs:
   using: 'docker'
   image: 'Dockerfile'
-    volumes:
+  volumes:
     - name: workspace
       path: /github/workspace
   args:
