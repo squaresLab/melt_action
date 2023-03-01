@@ -11,8 +11,5 @@ outputs:
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  volumes:
-    - name: workspace
-      path: /github/workspace
   args:
     - ${{ inputs.pr }}
