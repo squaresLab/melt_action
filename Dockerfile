@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM danieltrt/breaking-changes:latest
 
 COPY entrypoint.sh /entrypoint.sh
 

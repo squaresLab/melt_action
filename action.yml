@@ -2,10 +2,9 @@
 name: 'Fix It'
 description: 'Generate comby rules from a PR'
 inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
+  pr:  # id of input
+    description: 'PR to be merged in your repo'
     required: true
-    default: 'World'
 outputs:
   time: # id of output
     description: 'The time we greeted you'
@@ -13,4 +12,4 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.who-to-greet }}
+    - ${{ inputs.pr }}
