@@ -5,6 +5,9 @@ inputs:
   mountpoint:  # id of input
     description: 'Mount point for your repo'
     required: true
+  basesha:
+    description: 'Sha of the base of the merge'
+    required: true
 outputs:
   rules: # id of output
     description: 'rules fixit generated'
@@ -13,3 +16,4 @@ runs:
   image: 'Dockerfile'
   args:
     - ${{ inputs.mountpoint }}
+    - ${{ inputs.basesha }}
