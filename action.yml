@@ -17,4 +17,3 @@ runs:
   args:
     - ${{ inputs.mountpoint }}
     - ${{ inputs.basesha }}
-  working-directory: '/home/test/FixIt/'
