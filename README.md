@@ -86,4 +86,4 @@ jobs:
 
 ## License
 
-[MIT](LICENSE) © [danieltrt](https://github.com/danieltrt)
+[MIT](LICENSE)
