@@ -1,8 +1,7 @@
-# action.yml
 name: 'Fix It'
 description: 'Generate comby rules from a PR'
 inputs:
-  mountpoint:  # id of input
+  mountpoint:
     description: 'Mount point for your repo'
     required: true
   basesha:
