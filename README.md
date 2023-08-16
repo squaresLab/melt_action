@@ -28,7 +28,7 @@ jobs:
           ref: ${{ github.event.pull_request.head.sha }}
 
       - name: Generate comby rules
-        uses: danieltrt/fixit@v3
+        uses: squareslab/melt_action@v3
         with:
           mountpoint: /github/workspace
           basesha: ${{ github.event.pull_request.base.sha }}
