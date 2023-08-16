@@ -28,7 +28,7 @@ jobs:
           ref: ${{ github.event.pull_request.head.sha }}
 
       - name: Generate comby rules
-        uses: squareslab/melt_action@v3
+        uses: squaresLab/melt_action@v3
         with:
           mountpoint: /github/workspace
           basesha: ${{ github.event.pull_request.base.sha }}
@@ -54,7 +54,7 @@ jobs:
 
 ## Example
 
-In this example, Fix It generates comby rules for a pull request containing deprecations and uploads the generated rules as an artifact.
+In this example, MELT Action generates comby rules for a pull request containing deprecations and uploads the generated rules as an artifact.
 
 ```yaml
 on:
@@ -73,7 +73,7 @@ jobs:
           ref: ${{ github.event.pull_request.head.sha }}
 
       - name: Generate comby rules
-        uses: danieltrt/fixit@v3
+        uses: squaresLab/melt_action@v3
         with:
           mountpoint: /github/workspace
           basesha: ${{ github.event.pull_request.base.sha }}
