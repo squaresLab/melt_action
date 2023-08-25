@@ -2,6 +2,8 @@
 
 MELT is a GitHub action that generates comby rules for clients of a library when a pull request contains deprecations. Clients can use these comby rules to adapt to the changes in the library.
 
+*This is a work in progress. The current docker image does not contain the latest version of MELT.*
+
 ## Features
 
 - Automatically generates comby rules from a pull request containing deprecations
@@ -52,37 +54,6 @@ jobs:
 |--------|----------------------------|
 | rules  | Rules MELT generated     |
 
-## Example
-
-In this example, MELT Action generates comby rules for a pull request containing deprecations and uploads the generated rules as an artifact.
-
-```yaml
-on:
-  pull_request:
-    types: [opened, reopened]
-
-jobs:
-  gen_rules:
-    runs-on: ubuntu-latest
-    name: Automatically generate comby rules from the request
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 2
-          ref: ${{ github.event.pull_request.head.sha }}
-
-      - name: Generate comby rules
-        uses: squaresLab/melt_action@v3
-        with:
-          mountpoint: /github/workspace
-          basesha: ${{ github.event.pull_request.base.sha }}
-
-      - name: Upload artifact
-        uses: actions/upload-artifact@v3
-        with:
-          path: ${{ github.workspace }}/generated_file.txt
-```
 
 ## License
 
