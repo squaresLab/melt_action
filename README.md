@@ -11,7 +11,7 @@ MELT is a GitHub action that generates comby rules for clients of a library when
 
 ## Usage
 
-To use Fix It in your GitHub workflow, add the following snippet to your `.github/workflows/main.yml` file:
+To use MELT in your GitHub workflow, add the following snippet to your `.github/workflows/main.yml` file:
 
 ```yaml
 on:
