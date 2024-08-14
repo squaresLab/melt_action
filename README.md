@@ -2,8 +2,9 @@
 
 ## What is MELT?
 
-**MELT** is a tool designed to generate upgrade rules whenever a library breaks an API. 
-It integrates with your library workflow, and infers upgrade rules to help your clients upgrade between library versions.
+**MELT** is a tool that automatically generates upgrade rules when your library undergoes API-breaking changes. 
+It integrates into your workflow, making it easier for your clients to transition between different versions of your library.
+The upgrade rules are expressed in Comby, and thus easily interpratable, adaptable, and verifiable.
 
 ### Example Use Case
 
