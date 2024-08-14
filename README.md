@@ -39,8 +39,11 @@ Fortunately, MELT's GitHub Action can automatically generate the necessary trans
 For this particular change you've made, MELT would generate a transformation rule:
 
 ```python
-:[x].fetch_data(:[endpoint], as_json=True) -> :[x].fetch_data(:[endpoint]).to_json()
+:[[x]].fetch_data(:[endpoint], as_json=True) -> :[[x]].fetch_data(:[endpoint]).to_json()
+
+    where :[x].type == "DataService"
 ```
+`:[[x]]` is simply a placeholder value to match any indentifier.
 
 Your library clients can easily apply this transformation rule to upgrade between versions. 
 The only requirement is that they have (Comby)[comby.dev] installed — a lightweight code transformation tool similar to sed.
