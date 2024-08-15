@@ -8,10 +8,8 @@ The upgrade rules are expressed in Comby, and thus easily interpratable, adaptab
 
 ### Example Use Case
 
-Suppose you have an API where a function previously took an optional keyword argument to determine whether to return a JSON response. 
-You've now refactored the API to split this functionality into two separate methods, allowing the JSON conversion to be chained.
-
-Imagine you submit the following breaking change to your library:
+Suppose your API originally had a function with an optional keyword argument to return a JSON response. 
+You've now refactored the API to split this functionality into two separate methods, resulting in the following breaking change:
 
 ```diff
 --- a/DataService.py
